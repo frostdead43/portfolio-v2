@@ -29,7 +29,7 @@ function StartApp({setScreen}) {
   return(
   <div className='welcome-page'>
     <h2>Press Start For New Game!</h2>
-    <button onClick={setLoading}><img src="public/assets/images/start-button.png"/></button>
+    <button onClick={setLoading}><img src="/assets/images/start-button.png"/></button>
   </div>
   )
  
