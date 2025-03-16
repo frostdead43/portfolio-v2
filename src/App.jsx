@@ -41,9 +41,9 @@ function Loading() {
       <h2>Loading...</h2>
       <h6>Please do not turn off your computer while opening this website.</h6>
       <div className='gif-area'>
-        <img src="./public/assets/images/shovel-knight.gif"/>
-        <img src="./public/assets/images/death-knight.gif"/>
-        <img src="./public/assets/images/running-kid.gif"/>
+        <img src="./assets/images/shovel-knight.gif"/>
+        <img src="./assets/images/death-knight.gif"/>
+        <img src="./assets/images/running-kid.gif"/>
       </div>
     </div>
   )
@@ -56,13 +56,13 @@ function Main() {
     <header>
       <a href="#">Mako</a>
       <div className='header-avatar'>
-      <img className='avatar' src="./public/assets/images/avatar.png"/>
+      <img className='avatar' src="./assets/images/avatar.png"/>
         <div>
           <span>-P1-</span>
           <div className='hearts'>
-          <img src="./public/assets/images/heart-icon.png"/>
-          <img src="./public/assets/images/heart-icon.png"/>
-          <img src="./public/assets/images/heart-icon.png"/>
+          <img src="./assets/images/heart-icon.png"/>
+          <img src="./assets/images/heart-icon.png"/>
+          <img src="./assets/images/heart-icon.png"/>
           </div>
         </div>
       </div>
@@ -71,10 +71,10 @@ function Main() {
 
     <div className='content'>
       <div className='categories'>
-      <a href=""><img src="./public/assets/images/about-icon.png"/></a>
-      <a href=""><img style={{padding: "6px"}} src="/public/assets/images/certificates-icon.png"/></a>
-      <a href=""><img style={{padding: "6px"}} src="/public/assets/images/projects-icon.png"/></a>
-      <a href=""><img src="./public/assets/images/contact-icon.png"/></a>
+      <a href=""><img src="./assets/images/about-icon.png"/></a>
+      <a href=""><img style={{padding: "6px"}} src="/assets/images/certificates-icon.png"/></a>
+      <a href=""><img style={{padding: "6px"}} src="/assets/images/projects-icon.png"/></a>
+      <a href=""><img src="./assets/images/contact-icon.png"/></a>
       </div>
       <div className='welcome-area'>
         <h1>Welcome To My <span>RETRO</span> Portfolio</h1>
