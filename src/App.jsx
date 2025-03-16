@@ -131,7 +131,7 @@ function AboutArea() {
             <h5>Armor</h5>
           </div>
           <div>
-           <img className='makif' src="./public/assets/images/akif-avatar.png" alt="" />
+           <img className='makif' src="./assets/images/akif-avatar.png" alt="" />
           </div>
         </div>
       </div>
