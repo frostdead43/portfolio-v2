@@ -213,6 +213,11 @@ header {
   width: 60px;
   height: 60px;
   border: 1px solid gray;
+  object-fit: cover;
+}
+
+.languages-area img:hover {
+  scale: 1.2;
 }
 
 .trait-area h4{
@@ -233,4 +238,60 @@ header {
 }
 
 
+/* Certificate-area */
+
+.certificate-area {
+  margin-top: 60px;
+}
+
+
+.parchment {
+  width: 100%;
+  padding: 20px;
+  background: rgb(244, 225, 198);
+  border: 10px solid rgb(184, 134, 11);
+  border-radius: 20px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  color: rgb(90, 62, 27);
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.parchment h6 {
+  text-align: left;
+}
+
+.parchment p {
+  font-size: 10px;
+  color: gray;
+  text-decoration: line-through;
+}
+
+.parchment p:nth-child(9) {
+  color: rgb(36, 218, 36);
+  text-decoration: none;
+}
+
+
+.parchment::before, .parchment::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  background: rgb(184, 134, 11);
+  top: -10px;
+  left: 20%;
+  transform: translateX(-50%) rotate(5deg);
+  border-radius: 50%;
+}
+
+.parchment::after {
+  top: auto;
+  bottom: -10px;
+  transform: translateX(-50%) rotate(5deg);
+  left: 270px;
+}
 

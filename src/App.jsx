@@ -85,7 +85,7 @@ function Main() {
         <div>
           <h2>Stats</h2>
           <div className='level-exp'>
-            <h5>Level 27</h5>
+            <h5>Level: 27</h5>
             <h5>2736/2750 XP</h5>
           </div>
           <div class="level-bar">
@@ -110,11 +110,22 @@ function Main() {
             <img src="/assets/images/music.gif" alt="music gif" />
             <img src="/assets/images/reading.gif" alt="reading gif" />
             <img src="/assets/images/playing-games.gif" alt="playing games gif" />
-
           </div>
         </div>
+      </div>
+    </div>
 
-
+    <div className='certificate-area'>
+      <div className='parchment'>
+      <h2>MY CERTIFICATES</h2>
+      <h6>Completed Quests</h6>
+        <a href="https://www.btkakademi.gov.tr/portal/course/algoritma-programlama-ve-veri-yapilarina-giris-12565"><p>Algorithm Programming and Introduction to Data</p></a>
+        <a href="https://www.btkakademi.gov.tr/portal/course/sifirdan-ileri-seviye-python-programlama-5877"><p>Advanced Python Programming From Zero</p></a>
+        <p>Software Developer Training Camp - Python & Selenium</p>
+        <p>100 Days Of Code - 2023 Web Development Bootcamp</p>
+        <p>AcunMedya Basic FrontEnd - Javascript </p>
+        <h6>Active Quests</h6>
+        <p>AcunMedya FrontEnd Software Expertise Bootcamp with React</p>
       </div>
     </div>
 
