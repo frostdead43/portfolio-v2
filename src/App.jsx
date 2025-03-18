@@ -82,6 +82,38 @@ function Main() {
       <AboutArea/>
 
       <div className='stats-area'>
+        <div>
+          <h2>Stats</h2>
+          <div className='level-exp'>
+            <h5>Level 27</h5>
+            <h5>2736/2750 XP</h5>
+          </div>
+          <div class="level-bar">
+            <div class="w3-green"></div>
+          </div>
+        </div>
+        <div className='languages-area'>
+          <img src="/assets/images/html5-logo.jpg" alt='html5-logo'/>
+          <img src="/assets/images/javascript-logo.jpg" alt='js-logo'/>
+          <img src="/assets/images/react-logo.jpg" alt='react-logo'/>
+          <img src="/assets/images/git-logo.jpg" alt='git-logo'/>
+          <img src="/assets/images/nextjs-logo.jpg" alt='nextjs-logo'/>
+          <img src="/assets/images/python-logo.jpg" alt='python-logo'/>
+          <img src="/assets/images/nodejs-logo.jpg" alt='nodejs-logo'/>
+          <img style={{backgroundColor: "white"}} src="/assets/images/supabase-logo.png" alt='supabase-logo'/>
+        </div>
+
+        <div className='trait-area'>
+          <h4>Hobbies</h4>
+          <div className='hobbies'>
+            <img src="/assets/images/gym.gif" alt="gym gif" />
+            <img src="/assets/images/music.gif" alt="music gif" />
+            <img src="/assets/images/reading.gif" alt="reading gif" />
+            <img src="/assets/images/playing-games.gif" alt="playing games gif" />
+
+          </div>
+        </div>
+
 
       </div>
     </div>
@@ -105,7 +137,7 @@ function AboutArea() {
         setIndex(index + 1);
 
         const audio = new Audio(retroSound);
-        audio.volume = 0.1; 
+        audio.volume = 0.0; 
         audio.play();
       }, 80);
       return () => clearTimeout(timeout);
