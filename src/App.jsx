@@ -1,5 +1,5 @@
 import { useState,useEffect } from 'react'
-import retroSound from "/public/assets/sounds/retro.wav";
+import retroSound from "/assets/sounds/retro.wav";
 import './styles/App.css'
 import "./styles/reset.css"
 
@@ -88,8 +88,8 @@ function Main() {
             <h5>Level: 27</h5>
             <h5>2736/2750 XP</h5>
           </div>
-          <div class="level-bar">
-            <div class="w3-green"></div>
+          <div className="level-bar">
+            <div className="w3-green"></div>
           </div>
         </div>
         <div className='languages-area'>
@@ -129,13 +129,14 @@ function Main() {
       </div>
     </div>
 
-    
+    <Projects/>
+
     </>
   )
 }
 
 function AboutArea() {
-  const text = "Hi Everyone. I'm Mehmet Akif and I'm a Frontend Developer. I decided to become a software developer thanks to my passion for computers that started from my childhood. I am studying at AcunMedia Academy right now. I'm currently learning Javascript, ReactJs, and NextJs. My biggest dream is to make my own narrative game.";
+  const text = "Hi Everyone. I'm Mehmet Akif and I'm a Frontend Developer. I decided to become a software developer thanks to my passion for computers that started from my childhood. I am studying at AcunMedya Academy right now. I'm currently learning Javascript, ReactJs, and NextJs. My biggest dream is to make my own narrative game.";
 
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
@@ -180,6 +181,42 @@ function AboutArea() {
       </div>
     </div>
   );
+}
+
+
+
+function Projects() {
+  
+
+  const [projects,setProjects] = useState([]);
+
+  useEffect(() => {
+
+    async function getData() {
+      const data = await fetch("/assets/data/data.json").then(res => res.json());
+      setProjects(data);
+    }
+    getData();
+
+  }, []);
+
+  useEffect(() => {
+    console.log(projects);
+  }, [projects]);
+
+  return(
+    <div className='project-area'>
+      <h3>MY PROJECTS 9999 IN 1</h3>
+      <h5>Use Arrows and SEL. ENTER BUTTON</h5>
+      <div className='projects'>
+        {projects.map(x =>
+          <ol key={x.id}>
+            <li>{x.name}</li>
+          </ol>
+        )}
+      </div>
+    </div>
+  )
 }
 
 export default App

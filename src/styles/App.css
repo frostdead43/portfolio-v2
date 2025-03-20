@@ -295,3 +295,45 @@ header {
   left: 270px;
 }
 
+
+/* Projects component */
+
+.project-area {
+  margin-top: 40px;
+  background-color: black;
+  height: 100vh;
+  padding-block: 24px;
+
+  h3 {
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    
+  }
+
+  h5 {
+    margin-top: 32px;
+    font-size: 10px;
+    color: white;
+    padding-inline: 6px;
+    
+  }
+}
+
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  ol {
+    color: green;
+    padding-inline: 20px;
+    margin-top: 24px;
+    padding-left: 60px;
+  
+  }
+  li {
+    list-style: decimal;
+    font-weight:bolder;
+    font-size: 14px;
+  }
+}

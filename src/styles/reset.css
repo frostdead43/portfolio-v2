@@ -7,7 +7,7 @@
 * {
   margin: 0;
   padding: 0;
-  cursor: url('public/assets/images/sword.cur'), auto;
+  cursor: url('./assets/images/sword.cur'), auto;
 }
 
 body {

@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "Kenban App",
+    "description": "Notları arşive gönderebileceğin bir React uygulaması.",
+    "technologies": ["React", "CSS", "Supabase"],
+    "live": "https://irem-gaye-akif-kenban-app-hopefully-last.vercel.app/"
+  },
+  {
+    "id": 2,
+    "name": "LookScout WebPage",
+    "description": "İzlediğin filmlere göre öneriler sunan bir film sitesi.",
+    "technologies": ["React", "TMDB API"],
+    "live": "https://ece-gokdeniz-akif-responsivelive.vercel.app/"
+  },
+  {
+    "id": 3,
+    "name": "Dictionary",
+    "description": "İzlediğin filmlere göre öneriler sunan bir film sitesi.",
+    "technologies": ["React", "TMDB API"],
+    "live": "https://dictionary-web-app-delta-three.vercel.app/"
+  },
+  {
+    "id": 4,
+    "name": "Product-Feedback-App",
+    "description": "İzlediğin filmlere göre öneriler sunan bir film sitesi.",
+    "technologies": ["React", "TMDB API"],
+    "live": "https://gaye-buse-omer-akif-product-feedback-app-two.vercel.app/"
+  },
+  {
+    "id": 5,
+    "name": "Quiz App",
+    "description": "İzlediğin filmlere göre öneriler sunan bir film sitesi.",
+    "technologies": ["React", "TMDB API"],
+    "live": "https://frontend-quiz-app-flax-zeta.vercel.app/"
+  },
+  {
+    "id": 6,
+    "name": "Invoice-App",
+    "description": "İzlediğin filmlere göre öneriler sunan bir film sitesi.",
+    "technologies": ["React", "TMDB API"],
+    "live": "https://invoice-app-react-three.vercel.app/"
+  },
+  {
+    "id": 7,
+    "name": "Todo",
+    "description": "İzlediğin filmlere göre öneriler sunan bir film sitesi.",
+    "technologies": ["React", "TMDB API"],
+    "live": "https://todo-app-three-phi-71.vercel.app/"
+  }
+]
