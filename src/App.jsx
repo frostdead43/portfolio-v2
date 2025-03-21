@@ -187,11 +187,11 @@ function AboutArea() {
 
 function Projects() {
   
-
   const [projects,setProjects] = useState([]);
+  const [selectedIndex,setSelectedIndex] = useState(0);
+  const [showDialog,setShowDialog] = useState(false);
 
   useEffect(() => {
-
     async function getData() {
       const data = await fetch("/assets/data/data.json").then(res => res.json());
       setProjects(data);
@@ -200,22 +200,59 @@ function Projects() {
 
   }, []);
 
+  function openDialog() {
+    setShowDialog(true);
+  }
+
+  function closeDialog() {
+    setShowDialog(false);
+  }
+
   useEffect(() => {
-    console.log(projects);
-  }, [projects]);
+    function handleKeyDown(e) {
+      if (e.key === "ArrowUp") {
+        setSelectedIndex((prev) => 
+        prev===0 ? projects.length-1:prev-1);
+      } else if (e.key === "ArrowDown") {
+        setSelectedIndex((prev) => 
+          prev === projects.length - 1 ? 0 : prev + 1)
+      } else if (e.key === "Enter" && projects.length >0) {
+        openDialog();
+      } else if (e.key === "Escape") {
+        closeDialog();
+      }
+    }
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+
+  },[selectedIndex,projects])
+  
 
   return(
     <div className='project-area'>
       <h3>MY PROJECTS 9999 IN 1</h3>
-      <h5>Use Arrows and SEL. ENTER BUTTON</h5>
+      <h5>USE <span>ARROWS</span> AND SEL. <span>ENTER</span> BUTTON</h5>
       <div className='projects'>
-        {projects.map(x =>
-          <ol key={x.id}>
-            <li>{x.name}</li>
-          </ol>
-        )}
+      <ol>
+        {projects.map((item, index) => (
+          <li key={index}> {index === selectedIndex ? "→" : " "}<span style={{ marginLeft: "10px" }}>{item.name}</span></li>
+        ))}
+      </ol>
       </div>
+      {showDialog && (
+        <div
+          className="dialog-area" onClick={closeDialog} >
+          <div className='dialog'>
+            <h2>{projects[selectedIndex].name}</h2>
+            <p>{projects[selectedIndex].description}</p>
+            <button onClick={closeDialog}>Kapat</button>
+          </div>
+        </div>
+      )}
     </div>
+  
   )
 }
 

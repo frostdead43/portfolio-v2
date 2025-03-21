@@ -312,11 +312,14 @@ header {
   }
 
   h5 {
+    font-style: italic;
     margin-top: 32px;
     font-size: 10px;
     color: white;
     padding-inline: 6px;
-    
+    span {
+      color: orange;
+    }
   }
 }
 
@@ -325,6 +328,7 @@ header {
   display: flex;
   flex-direction: column;
   ol {
+    list-style: decimal;
     color: green;
     padding-inline: 20px;
     margin-top: 24px;
@@ -332,8 +336,16 @@ header {
   
   }
   li {
-    list-style: decimal;
+  
     font-weight:bolder;
     font-size: 14px;
   }
+}
+
+/* dialog-area */
+
+
+.dialog {
+  background-color: white;
+  
 }
