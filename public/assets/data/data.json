@@ -2,50 +2,73 @@
   {
     "id": 1,
     "name": "Kenban App",
-    "description": "Notları arşive gönderebileceğin bir React uygulaması.",
-    "technologies": ["React", "CSS", "Supabase"],
-    "live": "https://irem-gaye-akif-kenban-app-hopefully-last.vercel.app/"
+    "img":"./assets/images/projectimg/kenban-project-ss.jpg",
+    "description": "In this kanban project, which we did together with İrem Çoban and Gaye Dinç during the camping process, the user can perform operations such as adding, deleting, grouping tasks and opening new boards on the Kenban board. ",
+    "technologies": ["React", "CSS", "Github"],
+    "live": "https://irem-gaye-akif-kenban-app-hopefully-last.vercel.app/",
+    "github":"https://github.com/frostdead43/irem-gaye-akif-kenban-app-hopefully-last"
   },
   {
     "id": 2,
     "name": "LookScout WebPage",
-    "description": "İzlediğin filmlere göre öneriler sunan bir film sitesi.",
-    "technologies": ["React", "TMDB API"],
-    "live": "https://ece-gokdeniz-akif-responsivelive.vercel.app/"
+    "img":"./assets/images/projectimg/lookscout-project-ss.png",
+    "description": "This is our first responsive design and one of our most valuable projects. In this project, there are 6 different css pages including landing page. The aim of the project is both to teach beautiful page designs and to show how to create a beautiful website by using different css rules on each page. ",
+    "technologies": ["HTML", "CSS"],
+    "live": "https://ece-gokdeniz-akif-responsivelive.vercel.app/",
+    "github":"https://github.com/acunmedyaakademi/ece-gokdeniz-akif"
   },
   {
     "id": 3,
     "name": "Dictionary",
-    "description": "İzlediğin filmlere göre öneriler sunan bir film sitesi.",
-    "technologies": ["React", "TMDB API"],
-    "live": "https://dictionary-web-app-delta-three.vercel.app/"
+    "img":"./assets/images/projectimg/dictionary-project-ss.png",
+    "description": "The purpose of our responsive dictionary project that we made with Gökdeniz Keleş with all functions working: to fetch the English words searched by the user and present them to the user. data was pulled and used as api through dictionaryapi.dev site..",
+    "technologies": ["CSS", "Javascript"],
+    "live": "https://dictionary-web-app-delta-three.vercel.app/",
+    "github":"https://github.com/frostdead43/dictionary-web-app"
   },
   {
     "id": 4,
     "name": "Product-Feedback-App",
-    "description": "İzlediğin filmlere göre öneriler sunan bir film sitesi.",
+    "img":"./assets/images/projectimg/feedback-project-ss.jpg",
+    "description": "We completed this project together with Gaye Dinç, Busenur Savaş and Ömer Kuluç during the acunmedya software camp. The brief purpose of the project is as follows: the user can create feedback, write comments on feedback, like feedback, and categorize feedback with the roadmap button.",
     "technologies": ["React", "TMDB API"],
-    "live": "https://gaye-buse-omer-akif-product-feedback-app-two.vercel.app/"
+    "live": "https://gaye-buse-omer-akif-product-feedback-app-two.vercel.app/",
+    "github":"https://github.com/frostdead43/gaye-buse-omer-akif-product-feedback-app"
   },
   {
     "id": 5,
     "name": "Quiz App",
-    "description": "İzlediğin filmlere göre öneriler sunan bir film sitesi.",
+    "img":"./assets/images/projectimg/frontendquiz-project-ss.png",
+    "description": "Quiz app project is a question and answer project consisting of 4 categories of 10 questions each. The user chooses one of the categories Html, CSS, Javascript or Accessibility and gets 10 questions in these categories. After the questions are finished, the user can see how many correct answers he/she has chosen from the 10 questions.",
     "technologies": ["React", "TMDB API"],
-    "live": "https://frontend-quiz-app-flax-zeta.vercel.app/"
+    "live": "https://frontend-quiz-app-flax-zeta.vercel.app/",
+    "github":"https://github.com/frostdead43/frontend-quiz-app"
   },
   {
     "id": 6,
     "name": "Invoice-App",
-    "description": "İzlediğin filmlere göre öneriler sunan bir film sitesi.",
+    "img":"./assets/images/projectimg/invoice-project-ss.png",
+    "description": "invoice app is an invoicing program as the name suggests. When the user says new invoice, he/she enters the information of the buyer and himself/herself, the name and quantity of the product. The total price appears in the main menu. Selects one of the options to send as pending or draft. When completed, it can be marked as paid. there are also delete and edit operations",
     "technologies": ["React", "TMDB API"],
-    "live": "https://invoice-app-react-three.vercel.app/"
+    "live": "https://invoice-app-react-three.vercel.app/",
+    "github":"https://github.com/frostdead43/invoice-app-react"
   },
   {
     "id": 7,
     "name": "Todo",
-    "description": "İzlediğin filmlere göre öneriler sunan bir film sitesi.",
+    "img":"./assets/images/projectimg/todo-project-ss.png",
+    "description": "One of our first projects was Todo App, as every student who learns software does. Simply Todo app can be said as a to-do list. The user can add and subtract to the to-do list. It also has day and night mode",
     "technologies": ["React", "TMDB API"],
-    "live": "https://todo-app-three-phi-71.vercel.app/"
+    "live": "https://todo-app-three-phi-71.vercel.app/",
+    "github":"https://github.com/frostdead43/todo-app"
+  },
+  {
+    "id": 8,
+    "name": "Markdown-Editor",
+    "img":"./assets/images/projectimg/markdown-project-ss.png",
+    "description": "The Markdown Editor uses a short-hand syntax style text to create documents and then converts that text to HTML. Markdown is useful when articles contain more text and fewer multimedia elements.In this application, we made a simple markdown editor with Gökdeniz Keleş. We used a ready library for markdown. The user can write whatever they want in txt format. When he clicks Preview, he sees it converted to markdown format",
+    "technologies": ["React", "TMDB API"],
+    "live": "https://markdown-editor-in-browser.vercel.app/",
+    "github":"https://github.com/frostdead43/markdown-editor-in-browser"
   }
 ]

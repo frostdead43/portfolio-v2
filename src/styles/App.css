@@ -303,6 +303,7 @@ header {
   background-color: black;
   height: 100vh;
   padding-block: 24px;
+  position: relative;
 
   h3 {
     font-size: 14px;
@@ -347,5 +348,6 @@ header {
 
 .dialog {
   background-color: white;
-  
+  padding-inline: 16px;
+  padding-block: 32px;
 }

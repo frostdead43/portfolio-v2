@@ -245,6 +245,7 @@ function Projects() {
         <div
           className="dialog-area" onClick={closeDialog} >
           <div className='dialog'>
+            <img src={projects[selectedIndex].img}/>
             <h2>{projects[selectedIndex].name}</h2>
             <p>{projects[selectedIndex].description}</p>
             <button onClick={closeDialog}>Kapat</button>
