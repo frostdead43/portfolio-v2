@@ -186,10 +186,9 @@ function AboutArea() {
 
 
 function Projects() {
-  
-  const [projects,setProjects] = useState([]);
-  const [selectedIndex,setSelectedIndex] = useState(0);
-  const [showDialog,setShowDialog] = useState(false);
+  const [projects, setProjects] = useState([]);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [showDialog, setShowDialog] = useState(false);
 
   useEffect(() => {
     async function getData() {
@@ -197,64 +196,94 @@ function Projects() {
       setProjects(data);
     }
     getData();
-
   }, []);
 
   function openDialog() {
     setShowDialog(true);
+    selectMenuSound();
   }
 
   function closeDialog() {
     setShowDialog(false);
+    selectMenuSound(); 
+  }
+
+  function moveUp() {
+    setSelectedIndex(prev => (prev === 0 ? projects.length - 1 : prev - 1));
+    playMenuSound();
+  }
+
+  function moveDown() {
+    setSelectedIndex(prev => (prev === projects.length - 1 ? 0 : prev + 1));
+    playMenuSound(); 
+  }
+
+  function playMenuSound() {
+    const menuAudio = new Audio("/assets/sounds/choose.mp3");
+    menuAudio.play();
+  }
+
+  function selectMenuSound() {
+    const selectAudio = new Audio("/assets/sounds/select.mp3");
+    selectAudio.play();
   }
 
   useEffect(() => {
     function handleKeyDown(e) {
       if (e.key === "ArrowUp") {
-        setSelectedIndex((prev) => 
-        prev===0 ? projects.length-1:prev-1);
+        moveUp(); 
       } else if (e.key === "ArrowDown") {
-        setSelectedIndex((prev) => 
-          prev === projects.length - 1 ? 0 : prev + 1)
-      } else if (e.key === "Enter" && projects.length >0) {
+        moveDown(); 
+      } else if (e.key === "Enter" && projects.length > 0) {
         openDialog();
       } else if (e.key === "Escape") {
         closeDialog();
       }
     }
+
     window.addEventListener("keydown", handleKeyDown);
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
+  }, [projects]);
 
-  },[selectedIndex,projects])
-  
-
-  return(
-    <div className='project-area'>
+  return (
+    <div className="project-area">
       <h3>MY PROJECTS 9999 IN 1</h3>
       <h5>USE <span>ARROWS</span> AND SEL. <span>ENTER</span> BUTTON</h5>
-      <div className='projects'>
-      <ol>
-        {projects.map((item, index) => (
-          <li key={index}> {index === selectedIndex ? "→" : " "}<span style={{ marginLeft: "10px" }}>{item.name}</span></li>
-        ))}
-      </ol>
+      <div className="projects">
+        <ol>
+          {projects.map((item, index) => (
+            <li key={index}>
+              {index === selectedIndex ? "→" : " "}
+              <span style={{ marginLeft: "10px" }}>{item.name}</span>
+            </li>
+          ))}
+        </ol>
+        {!showDialog && (
+          <div className="buttons">
+            <img onClick={moveUp} className="btn-up" src="/assets/images/project-arrow-buttonDown.png" alt="" />
+            <img onClick={moveDown} className="btn-down" src="/assets/images/project-arrow-buttonUp.png" alt="" />
+            <img onClick={closeDialog} className="btnn" src="/assets/images/project-close-button.png" alt="" />
+            <img onClick={openDialog} className="btnn" src="/assets/images/project-start-button.png" alt="" />
+          </div>
+        )}
       </div>
       {showDialog && (
-        <div
-          className="dialog-area" onClick={closeDialog} >
-          <div className='dialog'>
-            <img src={projects[selectedIndex].img}/>
+        <div className="dialog-area" onClick={closeDialog}>
+          <div className="dialog">
+            <img src={projects[selectedIndex].img} />
             <h2>{projects[selectedIndex].name}</h2>
             <p>{projects[selectedIndex].description}</p>
-            <button onClick={closeDialog}>Kapat</button>
+            <div className='links'>
+              <a href={projects[selectedIndex].live}>Live</a>
+              <a href={projects[selectedIndex].github}>Github</a>
+            </div>
           </div>
         </div>
       )}
     </div>
-  
-  )
+  );
 }
 
 export default App
