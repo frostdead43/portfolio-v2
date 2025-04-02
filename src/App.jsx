@@ -130,6 +130,7 @@ function Main() {
     </div>
 
     <Projects/>
+    {/* <Footer/> */}
 
     </>
   )
@@ -149,7 +150,7 @@ function AboutArea() {
         setIndex(index + 1);
 
         const audio = new Audio(retroSound);
-        audio.volume = 0.0; 
+        audio.volume = 0.1; 
         audio.play();
       }, 80);
       return () => clearTimeout(timeout);
@@ -215,11 +216,13 @@ function Projects() {
 
   function moveDown() {
     setSelectedIndex(prev => (prev === projects.length - 1 ? 0 : prev + 1));
+    playMenuSound.volume = 0.3;
     playMenuSound(); 
   }
 
   function playMenuSound() {
     const menuAudio = new Audio("/assets/sounds/choose.mp3");
+    menuAudio.volume = 0.3;
     menuAudio.play();
   }
 
@@ -248,42 +251,62 @@ function Projects() {
   }, [projects]);
 
   return (
-    <div className="project-area">
-      <h3>MY PROJECTS 9999 IN 1</h3>
-      <h5>USE <span>ARROWS</span> AND SEL. <span>ENTER</span> BUTTON</h5>
-      <div className="projects">
-        <ol>
-          {projects.map((item, index) => (
-            <li key={index}>
-              {index === selectedIndex ? "→" : " "}
-              <span style={{ marginLeft: "10px" }}>{item.name}</span>
-            </li>
-          ))}
-        </ol>
-        {!showDialog && (
-          <div className="buttons">
-            <img onClick={moveUp} className="btn-up" src="/assets/images/project-arrow-buttonDown.png" alt="" />
-            <img onClick={moveDown} className="btn-down" src="/assets/images/project-arrow-buttonUp.png" alt="" />
-            <img onClick={closeDialog} className="btnn" src="/assets/images/project-close-button.png" alt="" />
-            <img onClick={openDialog} className="btnn" src="/assets/images/project-start-button.png" alt="" />
-          </div>
-        )}
-      </div>
-      {showDialog && (
-        <div className="dialog-area" onClick={closeDialog}>
-          <div className="dialog">
-            <img src={projects[selectedIndex].img} />
-            <h2>{projects[selectedIndex].name}</h2>
-            <p>{projects[selectedIndex].description}</p>
-            <div className='links'>
-              <a href={projects[selectedIndex].live}>Live</a>
-              <a href={projects[selectedIndex].github}>Github</a>
-            </div>
+    showDialog ? (
+      <div className="dialog-area" onClick={closeDialog}>
+        <div className="dialog">
+        <img onClick={closeDialog} style={{marginBottom:"10px"}} src="./assets/images/cancel-button.png"/>
+          <img src={projects[selectedIndex].img} alt={projects[selectedIndex].name} />
+          <h2>{projects[selectedIndex].name}</h2>
+          <p>{projects[selectedIndex].description}</p>
+          <div className='links'>
+            <a href={projects[selectedIndex].live} target="_blank" rel="noopener noreferrer">Live</a>
+            <a href={projects[selectedIndex].github} target="_blank" rel="noopener noreferrer">Github</a>
           </div>
         </div>
-      )}
-    </div>
+      </div>
+    ) : (
+      <div className="project-area">
+        <h3>MY PROJECTS 9999 IN 1</h3>
+        <h5>USE <span>ARROWS</span> AND SEL. <span>ENTER</span> BUTTON</h5>
+        <div className="projects">
+          <ol>
+            {projects.map((item, index) => (
+              <li key={index}>
+                {index === selectedIndex ? "→" : " "}
+                <span style={{ marginLeft: "10px" }}>{item.name}</span>
+              </li>
+            ))}
+          </ol>
+          {!showDialog && (
+            <div className="buttons">
+              <div>
+              <img onClick={moveUp} className="btn-up" src="/assets/images/project-arrow-buttonUp.png" alt="Up" />
+              <img onClick={moveDown} className="btn-down" src="/assets/images/project-arrow-buttonDown.png" alt="Down" />
+              </div>
+              <div>
+              <img onClick={openDialog} className="btnn" src="/assets/images/project-start-button.png" alt="Start" />
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    )
   );
-}
+}  
+
+
+
+// function Footer() {
+//   return(
+//     <footer>
+//      <img className='castle-bg' src="/assets/images/castle-background.png"/>
+//       <div className='upper-footer'>
+//         <h2>INSERT <br /> COIN</h2>
+//         <a href="#">BACK TO TOP</a>
+
+//       </div>
+//     </footer>
+//   )
+// }
 
 export default App
