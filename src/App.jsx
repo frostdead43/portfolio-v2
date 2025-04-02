@@ -60,9 +60,9 @@ function Main() {
         <div>
           <span>-P1-</span>
           <div className='hearts'>
-          <img src="./assets/images/heart-icon.png"/>
-          <img src="./assets/images/heart-icon.png"/>
-          <img src="./assets/images/heart-icon.png"/>
+            <img src="./assets/images/heart-icon.png"/>
+            <img src="./assets/images/heart-icon.png"/>
+            <img src="./assets/images/heart-icon.png"/>
           </div>
         </div>
       </div>
@@ -139,7 +139,9 @@ function Main() {
     </div>
 
     <Projects/>
-    {/* <Footer/> */}
+    <Castle/>
+    <Footer/>
+    
 
     </>
   )
@@ -304,18 +306,51 @@ function Projects() {
 }  
 
 
+function Castle() {
+  return(
+    <>
+     <img className='castle-bg' src="/assets/images/castle-background.png"/>
+    </>
+  )
+}
 
-// function Footer() {
-//   return(
-//     <footer>
-//      <img className='castle-bg' src="/assets/images/castle-background.png"/>
-//       <div className='upper-footer'>
-//         <h2>INSERT <br /> COIN</h2>
-//         <a href="#">BACK TO TOP</a>
 
-//       </div>
-//     </footer>
-//   )
-// }
+
+function Footer() {
+  return(
+    <footer>
+      <div className='upper-footer'>
+        <h2>INSERT <br /> COIN</h2>
+        <a className='back-to-top' href="#">BACK TO TOP</a>
+      </div>
+
+      <div className='middle-footer'>
+        <div className='phone'>
+          <img src="/assets/images/whatsapp-logo.png" alt="whatsapp footer logo" />
+          <span>(+90)507 460 4494</span>
+        </div>
+        <div className='email'>
+          <img src="/assets/images/email-logo.png" alt="email footer logo" />
+          <span>makifkucukyilmaz@hotmail.com</span>
+        </div>
+        <div className='resume'>
+          <img src="/assets/images/resume-logo.png" alt="resume footer logo" />
+          <a href="assets/resume mehmet-akif.pdf" download="resume mehmet akif.pdf">Download Resume</a>
+        </div>
+      </div>
+      <div className='social-media'>
+        <a href="https://www.instagram.com/makifkyilmaz/"><img src="./assets/images/instagram-logo.png" alt="instagram logo" /></a>
+        <a href="https://github.com/frostdead43"><img style={{background:"gray", border:"none"}} src="./assets/images/github-logo.png" alt="github logo" /></a>
+        <a href="www.linkedin.com/in/mehmet-akif-küçükyılmaz43"><img src="./assets/images/linkedin-logo.png" alt="linkedin logo" /></a>
+        <a href="https://x.com/frostdead43"><img src="./assets/images/twitter-logo.png" alt="twitter logo" /></a>
+        <a href="https://codepen.io/frostdead43"><img src="./assets/images/codepen-logo.png" alt="codepen logo" /></a>
+      </div>
+
+      <div className='bottom-footer'>
+        <span class="copyright-holder"> <span class="copyright">&#169;</span> Mehmet Akif Küçükyılmaz 2025</span>
+      </div>
+    </footer>
+  )
+}
 
 export default App
