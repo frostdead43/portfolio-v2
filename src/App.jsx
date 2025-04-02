@@ -71,17 +71,17 @@ function Main() {
 
     <div className='content'>
       <div className='categories'>
-      <a href=""><img src="./assets/images/about-icon.png"/></a>
-      <a href=""><img style={{padding: "6px"}} src="/assets/images/certificates-icon.png"/></a>
-      <a href=""><img style={{padding: "6px"}} src="/assets/images/projects-icon.png"/></a>
-      <a href=""><img src="./assets/images/contact-icon.png"/></a>
+      <a href="#stats"><img src="./assets/images/about-icon.png"/></a>
+      <a href="#certificate"><img style={{padding: "6px"}} src="/assets/images/certificates-icon.png"/></a>
+      <a href="#projects"><img style={{padding: "6px"}} src="/assets/images/projects-icon.png"/></a>
+      <a href="#footer"><img src="./assets/images/contact-icon.png"/></a>
       </div>
       <div className='welcome-area'>
         <h1>Welcome To My <span>RETRO</span> Portfolio</h1>
       </div>
       <AboutArea/>
 
-      <div className='stats-area'>
+      <div id='stats' className='stats-area'>
         <div>
           <h2>Stats</h2>
           <div className='level-exp'>
@@ -124,7 +124,7 @@ function Main() {
       </div>
     </div>
 
-    <div className='certificate-area'>
+    <div id='certificate' className='certificate-area'>
       <div className='parchment'>
       <h2>MY CERTIFICATES</h2>
       <h6>Completed Quests</h6>
@@ -276,7 +276,7 @@ function Projects() {
         </div>
       </div>
     ) : (
-      <div className="project-area">
+      <div id='projects' className="project-area">
         <h3>MY PROJECTS 9999 IN 1</h3>
         <h5>USE <span>ARROWS</span> AND SEL. <span>ENTER</span> BUTTON</h5>
         <div className="projects">
@@ -318,7 +318,7 @@ function Castle() {
 
 function Footer() {
   return(
-    <footer>
+    <footer id='footer'>
       <div className='upper-footer'>
         <h2>INSERT <br /> COIN</h2>
         <a className='back-to-top' href="#">BACK TO TOP</a>
@@ -339,11 +339,11 @@ function Footer() {
         </div>
       </div>
       <div className='social-media'>
+        <a href="www.linkedin.com/in/mehmet-akif-küçükyılmaz43"><img src="./assets/images/linkedin-logo.png" alt="linkedin logo" /></a>
         <a href="https://www.instagram.com/makifkyilmaz/"><img src="./assets/images/instagram-logo.png" alt="instagram logo" /></a>
         <a href="https://github.com/frostdead43"><img style={{background:"gray", border:"none"}} src="./assets/images/github-logo.png" alt="github logo" /></a>
-        <a href="www.linkedin.com/in/mehmet-akif-küçükyılmaz43"><img src="./assets/images/linkedin-logo.png" alt="linkedin logo" /></a>
-        <a href="https://x.com/frostdead43"><img src="./assets/images/twitter-logo.png" alt="twitter logo" /></a>
         <a href="https://codepen.io/frostdead43"><img src="./assets/images/codepen-logo.png" alt="codepen logo" /></a>
+        <a href="https://x.com/frostdead43"><img src="./assets/images/twitter-logo.png" alt="twitter logo" /></a>
       </div>
 
       <div className='bottom-footer'>

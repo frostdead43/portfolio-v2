@@ -419,6 +419,7 @@ header {
 footer {
   padding: 40px 16px;
   background-color: black;
+  background: url("/assets/images/footer-bg.png") center no-repeat;
 }
 
 .upper-footer {
