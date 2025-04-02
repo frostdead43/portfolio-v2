@@ -220,6 +220,17 @@ header {
   scale: 1.2;
 }
 
+.trait-area h6 {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.trait-area h6:hover {
+  scale: 1.1;
+  margin-left: 16px;
+
+}
+
 .trait-area h4{
   margin-block: 30px 10px;
   color: rgb(236, 205, 205);
@@ -229,7 +240,7 @@ header {
 .hobbies {
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
   img {
     width: 60px;

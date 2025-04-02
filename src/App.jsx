@@ -101,15 +101,24 @@ function Main() {
           <img src="/assets/images/python-logo.jpg" alt='python-logo'/>
           <img src="/assets/images/nodejs-logo.jpg" alt='nodejs-logo'/>
           <img style={{backgroundColor: "white"}} src="/assets/images/supabase-logo.png" alt='supabase-logo'/>
+          <img src="/assets/images/csharp-logo.jpg" alt='c#-logo'/>
         </div>
 
         <div className='trait-area'>
+          <h4>Traits</h4>
+          <h6>Open for collaboration</h6>
+          <h6>Very Creative</h6>
+          <h6>Code organizator</h6>
+          <h6>Hardworking</h6>
+          <h6>GIT GUD!</h6>
           <h4>Hobbies</h4>
           <div className='hobbies'>
             <img src="/assets/images/gym.gif" alt="gym gif" />
+            <img src="/assets/images/football.gif" alt="football gif" />
             <img src="/assets/images/music.gif" alt="music gif" />
             <img src="/assets/images/reading.gif" alt="reading gif" />
             <img src="/assets/images/playing-games.gif" alt="playing games gif" />
+            <img src="/assets/images/coding.gif" alt="coding gif" />
           </div>
         </div>
       </div>
