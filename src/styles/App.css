@@ -521,5 +521,6 @@ dialog::backdrop {
 }
 
 .tutorial-dialog {
-  margin: auto
+  margin: auto;
+  padding: 16px;
 }

@@ -77,7 +77,8 @@ function Main() {
       </div>
       <button onClick={openTutorialDialog} className='question-mark'>?</button>
       <dialog className='tutorial-dialog' ref={dialogRef}>
-        <h2>asasd</h2>
+        <h2>
+        hello stranger This is my portfolio. It is currently a work in progress. Mako make it ASAP or Orhan Hoca will kill you :D</h2>
       </dialog>
     </header>
 
