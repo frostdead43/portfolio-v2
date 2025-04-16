@@ -512,3 +512,14 @@ footer {
   0% { transform: rotateY(0deg); }
   100% { transform: rotateY(360deg); }
 }
+
+
+/* tutorial */
+
+dialog::backdrop {
+  background: rgba(0,0,0, .5);
+}
+
+.tutorial-dialog {
+  margin: auto
+}

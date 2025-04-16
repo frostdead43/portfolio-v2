@@ -1,16 +1,18 @@
-import { useState,useEffect } from 'react'
+import { useState,useEffect, useRef, } from 'react'
 import retroSound from "/assets/sounds/retro.wav";
 import './styles/App.css'
 import "./styles/reset.css"
 
 function App() {
   const [screen, setScreen] = useState("start");
+ 
 
+ 
   return (
     <>
      {screen === "start" && <StartApp setScreen={setScreen}/>}
      {screen === "loading" && <Loading />}
-     {screen === "main" && <Main />}
+     {screen === "main" && <Main/>}
     </>
   )
 }
@@ -28,6 +30,7 @@ function StartApp({setScreen}) {
 
   return(
   <div className='welcome-page'>
+    <h2>Hello, New Player! This Is My Portfolio</h2>
     <h2>Press Start For New Game!</h2>
     <button onClick={setLoading}><img src="/assets/images/start-button.png"/></button>
   </div>
@@ -51,6 +54,12 @@ function Loading() {
 
 
 function Main() {
+  const dialogRef = useRef(null);
+
+  function openTutorialDialog() {
+    dialogRef.current.showModal();
+  }
+
   return (
     <>
     <header>
@@ -66,7 +75,10 @@ function Main() {
           </div>
         </div>
       </div>
-      <button className='question-mark'>?</button>
+      <button onClick={openTutorialDialog} className='question-mark'>?</button>
+      <dialog className='tutorial-dialog' ref={dialogRef}>
+        <h2>asasd</h2>
+      </dialog>
     </header>
 
     <div className='content'>
@@ -161,7 +173,7 @@ function AboutArea() {
         setIndex(index + 1);
 
         const audio = new Audio(retroSound);
-        audio.volume = 0.1; 
+        audio.volume = 0.0; 
         audio.play();
       }, 80);
       return () => clearTimeout(timeout);
@@ -339,7 +351,7 @@ function Footer() {
         </div>
       </div>
       <div className='social-media'>
-        <a href="www.linkedin.com/in/mehmet-akif-küçükyılmaz43"><img src="./assets/images/linkedin-logo.png" alt="linkedin logo" /></a>
+        <a href="https://www.linkedin.com/in/mehmet-akif-k%C3%BC%C3%A7%C3%BCky%C4%B1lmaz-6a6352245/"><img src="./assets/images/linkedin-logo.png" alt="linkedin logo" /></a>
         <a href="https://www.instagram.com/makifkyilmaz/"><img src="./assets/images/instagram-logo.png" alt="instagram logo" /></a>
         <a href="https://github.com/frostdead43"><img style={{background:"gray", border:"none"}} src="./assets/images/github-logo.png" alt="github logo" /></a>
         <a href="https://codepen.io/frostdead43"><img src="./assets/images/codepen-logo.png" alt="codepen logo" /></a>
@@ -347,7 +359,7 @@ function Footer() {
       </div>
 
       <div className='bottom-footer'>
-        <span class="copyright-holder"> <span class="copyright">&#169;</span> Mehmet Akif Küçükyılmaz 2025</span>
+        <span className="copyright-holder"> <span className="copyright">&#169;</span> Mehmet Akif Küçükyılmaz 2025</span>
       </div>
     </footer>
   )
